@@ -299,12 +299,13 @@ export class BsModalComponent implements OnInit, AfterViewInit, OnChanges, OnDes
             backdrop = true;
 
         }
-
-        if (options.backdrop !== undefined) {
-            this.options.backdrop = backdrop;
-        }
-        if (options.keyboard !== undefined) {
-            this.options.keyboard = options.keyboard;
+        if (this.options) {
+            if (options.backdrop !== undefined) {
+                this.options.backdrop = backdrop;
+            }
+            if (options.keyboard !== undefined) {
+                this.options.keyboard = options.keyboard;
+            }
         }
     }
 
